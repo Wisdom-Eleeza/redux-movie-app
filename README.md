@@ -1,3 +1,6 @@
+Deployment-Link: 
+
+
 Installed Packages:
 1. npx create-react-app <fileName>
 2. npm install redux react-redux @reduxjs/toolkit
@@ -19,3 +22,12 @@ Folder Structure:
     - Movie Listing component
 4. Movie Listing component
     - MovieCard component
+
+What I learn...
+1. How to create store using configureStore
+2. How to link react to redux using the store props
+3.  Creating the initialState
+4. How to create Slice using CreateSlice({})
+5. How to create middleware function using createAsyncThunk() and creating extraReducers
+6. How to use Sass
+7. useState() and useEffect() etc...
