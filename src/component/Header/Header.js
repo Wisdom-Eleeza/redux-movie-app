@@ -11,14 +11,21 @@ import {
 const Header = () => {
   const [term, setTerm] = useState("");
   const dispatch = useDispatch();
+
   const submitHandler = (event) => {
-    if(term === '') return alert("Please Enter a Search Term")
     event.preventDefault();
+
+    if (term === "") {
+      alert("Please Enter a Search Term");
+      return;
+    }
+
     dispatch(fetchAsyncMovies(term));
     dispatch(fetchAsyncShows(term));
-    setTerm("");
-    // console.log('term::', term);
+
+    setTerm(""); // Reset the value of 'term' to empty after the search
   };
+
   return (
     <div className="header">
       <div className="logo">
@@ -28,7 +35,7 @@ const Header = () => {
         <form onSubmit={submitHandler}>
           <input
             type="text"
-            values={term}
+            value={term}
             placeholder="Search Movies or Series"
             onChange={(e) => setTerm(e.target.value)}
           />
